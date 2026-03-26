@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camiseta Brasil Copa 2026 — Jordan | 73% OFF</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+
+  <div style="background:#111;color:#fff;text-align:center;padding:12px 14px;font-size:1rem;font-weight:700;letter-spacing:0.5px;line-height:1.3;">
+    🔥 OUTLET DA SELEÇÃO — ATÉ 73% OFF
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-bar">
+    ⏰ PROMOÇÃO TERMINA DIA 29 ÀS 00:00 — Faltam: <span id="countdown">--:--:--</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__image">
+        <img id="hero-img" src="https://imgnike-a.akamaihd.net/1920x1920/09761715A3.jpg" alt="Camiseta Brasil Copa 2026 Jordan" />
+        <div class="hero__thumbs" id="hero-thumbs"></div>
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-title">Camiseta Oficial Brasil Copa 2026</h1>
+        <p class="product-subtitle">Jordan × Nike — Edição Especial Torcedor Pro</p>
+
+        <!-- PREÇO -->
+        <div class="price-section">
+          <div class="price-row">
+            <span class="price-current" id="total-price">R$ 119,99</span>
+            <span class="price-original">R$ 449,99</span>
+          </div>
+          <p class="price-discount">73% OFF — Você economiza R$ 330,00</p>
+          <p class="personalization-extras" id="personalization-extras" style="font-size:0.85rem;color:#757575;margin-top:4px;" hidden></p>
+        </div>
+
+        <!-- TAMANHO -->
+        <div class="size-section">
+          <label class="size-label">Selecione o tamanho</label>
+          <div class="size-grid" id="size-selector"></div>
+          <p class="size-error" id="size-error" hidden>⚠️ Selecione um tamanho</p>
+        </div>
+
+        <!-- PERSONALIZAÇÃO -->
+        <div class="personalization-section">
+          <div class="personalization-title">Personalize (opcional)</div>
+          <div class="personalization-fields">
+            <div class="field-group">
+              <label for="custom-name">Nome nas costas <span class="field-price">+R$ 19,99</span></label>
+              <input type="text" id="custom-name" class="custom-input" placeholder="Máx. 10 caracteres" maxlength="10" />
+            </div>
+            <div class="field-group">
+              <label for="custom-number">Número nas costas <span class="field-price">+R$ 9,99</span></label>
+              <input type="text" id="custom-number" class="custom-input" placeholder="Ex: 10" maxlength="2" inputmode="numeric" />
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTÃO COMPRAR -->
+        <div class="buy-section">
+          <button class="btn-buy" id="buy-cta">Comprar</button>
+        </div>
+
+        <!-- CHECKOUT -->
+        <div class="checkout-section" id="checkout-section" hidden>
+          <div class="checkout-title">Endereço de entrega</div>
+          <div class="checkout-fields">
+            <div class="field-group">
+              <label for="checkout-rua">Rua e número</label>
+              <input type="text" id="checkout-rua" class="custom-input" placeholder="Ex: Rua das Flores, 123" />
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <div class="field-group">
+                <label for="checkout-cidade">Cidade</label>
+                <input type="text" id="checkout-cidade" class="custom-input" placeholder="Ex: São Paulo" />
+              </div>
+              <div class="field-group">
+                <label for="checkout-estado">Estado</label>
+                <input type="text" id="checkout-estado" class="custom-input" placeholder="Ex: SP" maxlength="2" />
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="checkout-cep">CEP</label>
+              <input type="text" id="checkout-cep" class="custom-input" placeholder="00000-000" inputmode="numeric" maxlength="9" />
+            </div>
+          </div>
+          <p class="size-error" id="checkout-error" hidden>⚠️ Preencha todos os campos de endereço</p>
+          <button class="btn-buy" id="pay-cta" style="margin-top:12px;">Continuar para pagamento</button>
+
+          <!-- PIX (aparece aqui mesmo, inline) -->
+          <div id="pix-section" hidden style="margin-top:24px;">
+            <h3 style="text-align:center;font-size:1.2rem;font-weight:600;margin-bottom:16px;">Pagamento via PIX</h3>
+
+            <div id="pix-loading" class="pix-state" hidden>
+              <div class="spinner"></div>
+              <p style="color:#757575;">Gerando código PIX...</p>
+            </div>
+
+            <div id="pix-awaiting" class="pix-state" hidden>
+              <p style="font-weight:600;font-size:1.1rem;margin-bottom:12px;">Valor: <span id="pix-value-display">R$ 119,99</span></p>
+              <div class="pix-qr">
+                <img id="pix-qr-img" src="" alt="QR Code PIX" />
+              </div>
+              <p style="font-size:0.9rem;color:#757575;margin-bottom:12px;">Escaneie o QR Code ou copie o código abaixo:</p>
+              <input type="text" id="pix-code" class="pix-code-input" readonly />
+              <button class="btn-secondary" id="copy-btn">Copiar código PIX</button>
+              <p id="copy-confirm" style="color:#00c44f;font-size:0.9rem;margin-top:8px;" hidden>✅ Código copiado!</p>
+              <div style="margin-top:20px;display:flex;align-items:center;justify-content:center;gap:8px;">
+                <span class="status-dot status-dot--waiting"></span>
+                <span id="pix-status-text" style="font-size:0.9rem;color:#757575;">Aguardando pagamento...</span>
+              </div>
+            </div>
+
+            <div id="pix-paid" class="pix-state" hidden>
+              <div style="font-size:4rem;margin-bottom:16px;">✅</div>
+              <h3 style="font-size:1.5rem;font-weight:600;margin-bottom:12px;">Pagamento confirmado!</h3>
+              <p style="color:#757575;">Seu pedido foi recebido. Entraremos em contato em breve.</p>
+            </div>
+
+            <div id="pix-expired" class="pix-state" hidden>
+              <p style="font-size:1.1rem;margin-bottom:16px;">⏰ O código PIX expirou</p>
+              <button class="btn-buy" id="new-pix-btn">Gerar novo PIX</button>
+            </div>
+
+            <div id="pix-error" class="pix-state" hidden>
+              <p id="pix-error-msg" style="color:#d32f2f;margin-bottom:16px;">Não foi possível gerar o PIX</p>
+              <button class="btn-buy" id="retry-btn">Tentar novamente</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BADGES DE CONFIANÇA -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin:20px 0;padding:16px;background:#f5f5f5;border-radius:4px;">
+          <div style="text-align:center;font-size:0.75rem;color:#757575;">
+            <div style="font-size:1.5rem;margin-bottom:4px;">🔒</div>
+            <div style="font-weight:600;">Pagamento<br>Seguro</div>
+          </div>
+          <div style="text-align:center;font-size:0.75rem;color:#757575;">
+            <div style="font-size:1.5rem;margin-bottom:4px;">📦</div>
+            <div style="font-weight:600;">Entrega<br>Garantida</div>
+          </div>
+          <div style="text-align:center;font-size:0.75rem;color:#757575;">
+            <div style="font-size:1.5rem;margin-bottom:4px;">↩️</div>
+            <div style="font-weight:600;">7 Dias para<br>Devolução</div>
+          </div>
+          <div style="text-align:center;font-size:0.75rem;color:#757575;">
+            <div style="font-size:1.5rem;margin-bottom:4px;">✅</div>
+            <div style="font-weight:600;">Produto<br>Original</div>
+          </div>
+        </div>
+
+        <!-- DETALHES -->
+        <details style="margin-top:24px;font-size:0.9rem;">
+          <summary style="cursor:pointer;font-weight:600;margin-bottom:12px;">Detalhes do produto</summary>
+          <ul style="list-style:disc;padding-left:20px;color:#757575;line-height:1.8;">
+            <li>Modelo oficial para a Copa do Mundo 2026</li>
+            <li>Tecido Dri-FIT — absorção de suor</li>
+            <li>Cores e escudo oficiais da Seleção</li>
+            <li>Corte moderno e confortável</li>
+            <li>Colaboração exclusiva Jordan × Nike</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section style="padding:48px 0;background:white;">
+    <div class="container">
+      <h2 style="text-align:center;font-size:1.5rem;font-weight:600;margin-bottom:32px;">Avaliações de Clientes</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:900px;margin:0 auto;">
+        <div style="padding:20px;border:1px solid #e5e5e5;border-radius:4px;">
+          <div style="color:#fbbf24;margin-bottom:8px;">⭐⭐⭐⭐⭐</div>
+          <p style="font-size:0.9rem;color:#111;margin-bottom:12px;line-height:1.6;">"Produto excelente! A qualidade é idêntica à original da Nike. Chegou rápido e bem embalado."</p>
+          <p style="font-size:0.8rem;color:#757575;font-weight:600;">— Carlos M., São Paulo</p>
+        </div>
+        <div style="padding:20px;border:1px solid #e5e5e5;border-radius:4px;">
+          <div style="color:#fbbf24;margin-bottom:8px;">⭐⭐⭐⭐⭐</div>
+          <p style="font-size:0.9rem;color:#111;margin-bottom:12px;line-height:1.6;">"Comprei para meu filho e ele amou! O tecido é leve e confortável. Super recomendo!"</p>
+          <p style="font-size:0.8rem;color:#757575;font-weight:600;">— Ana Paula R., Rio de Janeiro</p>
+        </div>
+        <div style="padding:20px;border:1px solid #e5e5e5;border-radius:4px;">
+          <div style="color:#fbbf24;margin-bottom:8px;">⭐⭐⭐⭐⭐</div>
+          <p style="font-size:0.9rem;color:#111;margin-bottom:12px;line-height:1.6;">"Melhor compra que fiz! Preço imbatível e qualidade top. Já comprei mais 2 unidades."</p>
+          <p style="font-size:0.8rem;color:#757575;font-weight:600;">— Marcos T., Belo Horizonte</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;padding:16px;background:#f5f5f5;border-radius:4px;max-width:600px;margin:24px auto 0;">
+        <p style="font-size:0.9rem;color:#111;font-weight:600;margin-bottom:4px;">⚡ Mais de 500 clientes satisfeitos</p>
+        <p style="font-size:0.8rem;color:#757575;">Nota média: 4.9/5.0 baseado em 127 avaliações</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALHES DO PRODUTO -->
+  <section style="padding:48px 0;background:#fff;">
+    <div class="container" style="max-width:900px;margin:0 auto;">
+      <h2 style="text-align:center;font-size:1.5rem;font-weight:600;margin-bottom:32px;">Detalhes do Produto</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;">
+        <div style="padding:20px;background:#f9f9f9;border-radius:8px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">👕</div>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:6px;">Material Premium</h3>
+          <p style="font-size:0.85rem;color:#757575;line-height:1.6;">Tecido Dri-FIT de alta performance com absorção de suor e secagem rápida.</p>
+        </div>
+        <div style="padding:20px;background:#f9f9f9;border-radius:8px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">⚽</div>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:6px;">Edição Copa 2026</h3>
+          <p style="font-size:0.85rem;color:#757575;line-height:1.6;">Modelo oficial da Seleção Brasileira para a Copa do Mundo 2026.</p>
+        </div>
+        <div style="padding:20px;background:#f9f9f9;border-radius:8px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">✨</div>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:6px;">Jordan × Nike</h3>
+          <p style="font-size:0.85rem;color:#757575;line-height:1.6;">Colaboração exclusiva com corte moderno, confortável e cores oficiais da Seleção.</p>
+        </div>
+        <div style="padding:20px;background:#f9f9f9;border-radius:8px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">📏</div>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:6px;">Tamanhos P ao GGG</h3>
+          <p style="font-size:0.85rem;color:#757575;line-height:1.6;">Modelagem unissex com corte ajustado. Consulte a tabela de medidas antes de comprar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>📱 Dúvidas? Fale conosco pelo WhatsApp</p>
+      <p>📦 Prazo de entrega: 5 a 10 dias úteis</p>
+      <p style="opacity:0.7;font-size:0.75rem;">© 2026 Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
